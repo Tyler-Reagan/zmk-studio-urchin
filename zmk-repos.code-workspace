@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../zmk-dongle-screen"
+		},
+		{
+			"path": "../zmk-studio-totem"
+		},
+		{
+			"path": "../reference-repos/urchin-zmk-firmware"
+		}
+	],
+	"settings": {}
+}
