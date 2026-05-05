@@ -48,15 +48,15 @@
         //  ┃ A             ┃ S             ┃ D             ┃ F             ┃ G             ┃   ┃ H             ┃ J             ┃ K             ┃ L             ┃ ;             ┃
         //  ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫   ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫
         //  ┃ Z             ┃ X             ┃ C             ┃ V             ┃ B             ┃   ┃ N             ┃ M             ┃ ,             ┃ .             ┃ /             ┃
-        //  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┛
+        //  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫   ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛
         //                                                  ┃ SYS+TAB       ┃ DEV+SPACE     ┃   ┃ BSPC          ┃ NUM+RET       ┃
         //                                                  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛
         //  combo [30+31]=ESC   combo [32+33]=FUN
         bindings = <
-        &kp Q          &kp W           &kp E           &kp R           &kp T               &kp Y           &kp U           &kp I           &kp O           &kp P
-        &kp A          &mt LGUI S      &mt LCTRL D     &mt LSHFT F     &kp G               &kp H           &mt RSHFT J     &mt RCTRL K     &mt RGUI L      &kp SEMI
-        &kp Z          &kp X           &kp C           &kp V           &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH
-                                                       &lt SYS TAB     &lt DEV SPACE       &kp BSPC        &lt NUM RET
+              &kp Q           &kp W           &kp E           &kp R           &kp T               &kp Y           &kp U           &kp I           &kp O           &kp P
+              &kp A           &mt LGUI S      &mt LCTRL D     &mt LSHFT F     &kp G               &kp H           &mt RSHFT J     &mt RCTRL K     &mt RGUI L      &kp SEMI
+              &kp Z           &kp X           &kp C           &kp V           &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH
+                                                              &lt SYS TAB     &lt DEV SPACE       &kp BSPC        &lt NUM RET
         >;
       };
 
@@ -67,15 +67,15 @@
         //  ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫   ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫
         //  ┃ GUI           ┃ ALT           ┃ CTRL          ┃ SHIFT         ┃               ┃   ┃ _             ┃ [             ┃ ]             ┃ '             ┃ $             ┃
         //  ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫   ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫
-        //  ┃               ┃               ┃               ┃               ┃               ┃   ┃               ┃ &             ┃ |             ┃ *             ┃ SHIFT TAB     ┃
-        //  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┛
-        //                                                  ┃               ┃               ┃   ┃ @             ┃ (  )          ┃
+        //  ┃               ┃               ┃               ┃               ┃               ┃   ┃ @             ┃ &             ┃ |             ┃ *             ┃ SHIFT TAB     ┃
+        //  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫   ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛
+        //                                                  ┃               ┃               ┃   ┃ (             ┃ )             ┃
         //                                                  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛
         bindings = <
-        &none           &none           &none           &none           &none               &kp MINUS       &kp LS(LBKT)    &kp LS(RBKT)    &kp GRAVE       &kp EQUAL
-        &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &none               &kp LS(MINUS)   &kp LBKT        &kp RBKT        &kp SQT         &kp LS(N4)
-        &none           &none           &none           &none           &none               &kp LS(TAB)     &kp LS(N7)      &kp BSLH        &kp LS(N8)      &none
-                                                        &none           &none               &kp LS(N2)      &kp LS(N9)
+              &none           &none           &none           &none           &none               &kp MINUS       &kp LS(LBKT)    &kp LS(RBKT)    &kp GRAVE       &kp EQUAL
+              &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &none               &kp LS(MINUS)   &kp LBKT        &kp RBKT        &kp SQT         &kp LS(N4)
+              &none           &none           &none           &none           &none               &kp LS(N2)      &kp LS(N7)      &kp BSLH        &kp LS(N8)      &none
+                                                              &none           &none               &kp LS(N9)      &kp LS(N0)
         >;
       };
 
@@ -87,14 +87,14 @@
         //  ┃ ALT           ┃ SHIFT         ┃ GUI           ┃ CTRL          ┃               ┃   ┃ SCREENSHOT+   ┃ ←             ┃ ↓             ┃ ↑             ┃ →             ┃
         //  ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫   ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫
         //  ┃ BT_CLR_ALL    ┃               ┃               ┃               ┃               ┃   ┃ UNDO          ┃ COPY          ┃ PASTE         ┃ CUT           ┃ LOCK SCREEN   ┃
-        //  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┛
-        //                                                  ┃               ┃               ┃   ┃ REFRESH       ┃ PLAY/MUTE     ┃
+        //  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫   ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛
+        //                                                  ┃               ┃               ┃   ┃ REFRESH       ┃ PLAY          ┃
         //                                                  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛
         bindings = <
-        &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &none               &kp LC(LS(N4))  &kp C_PREV      &kp C_VOL_DN    &kp C_VOL_UP    &kp C_NEXT
-        &kp LALT        &kp LSHFT       &kp LGUI        &kp LCTRL       &none               &kp LC(LS(N5))  &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT
-        &bt BT_CLR_ALL  &none           &none           &none           &none               &kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(LG(Q))
-                                                        &none           &none               &kp LC(R)       &kp C_PP
+              &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &none               &kp LC(LS(N4))  &kp C_PREV      &kp C_VOL_DN    &kp C_VOL_UP    &kp C_NEXT
+              &kp LALT        &kp LSHFT       &kp LGUI        &kp LCTRL       &none               &kp LC(LS(N5))  &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT
+              &bt BT_CLR_ALL  &none           &none           &none           &none               &kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(LG(Q))
+                                                              &none           &none               &kp LC(R)       &kp C_PP
         >;
       };
 
@@ -106,14 +106,14 @@
         //  ┃ =             ┃ 4             ┃ 5             ┃ 6             ┃               ┃   ┃               ┃ SHIFT         ┃ CTRL          ┃ ALT           ┃ GUI           ┃
         //  ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫   ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫
         //  ┃               ┃ 1             ┃ 2             ┃ 3             ┃               ┃   ┃               ┃               ┃               ┃               ┃               ┃
-        //  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┛
+        //  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫   ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛
         //                                                  ┃ .             ┃ 0             ┃   ┃               ┃               ┃
         //                                                  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛
         bindings = <
-        &kp MINUS       &kp N7          &kp N8          &kp N9          &none               &none           &none           &none           &none           &none
-        &kp EQUAL       &kp N4          &kp N5          &kp N6          &none               &none           &kp RSHFT       &kp RCTRL       &kp RALT        &kp RGUI
-        &none           &kp N1          &kp N2          &kp N3          &none               &none           &none           &none           &none           &none
-                                                        &kp DOT         &kp N0              &none           &none
+              &kp MINUS       &kp N7          &kp N8          &kp N9          &none               &none           &none           &none           &none           &none
+              &kp EQUAL       &kp N4          &kp N5          &kp N6          &none               &none           &kp RSHFT       &kp RCTRL       &kp RALT        &kp RGUI
+              &none           &kp N1          &kp N2          &kp N3          &none               &none           &none           &none           &none           &none
+                                                              &kp DOT         &kp N0              &none           &none
         >;
       };
 
@@ -125,14 +125,14 @@
         //  ┃ F11           ┃ F4            ┃ F5            ┃ F6            ┃               ┃   ┃               ┃ SHIFT         ┃ CTRL          ┃ ALT           ┃ GUI           ┃
         //  ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫   ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫
         //  ┃ F10           ┃ F1            ┃ F2            ┃ F3            ┃               ┃   ┃               ┃               ┃               ┃               ┃               ┃
-        //  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┛
+        //  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫   ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛
         //                                                  ┃ SPACE         ┃ TAB           ┃   ┃               ┃               ┃
         //                                                  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛
         bindings = <
-        &kp F12         &kp F7          &kp F8          &kp F9          &none               &none           &none           &none           &none           &none
-        &kp F11         &kp F4          &kp F5          &kp F6          &none               &none           &kp RSHFT       &kp RCTRL       &kp RALT        &kp RGUI
-        &kp F10         &kp F1          &kp F2          &kp F3          &none               &none           &none           &none           &none           &none
-                                                        &kp SPACE       &kp TAB             &none           &none
+              &kp F12         &kp F7          &kp F8          &kp F9          &none               &none           &none           &none           &none           &none
+              &kp F11         &kp F4          &kp F5          &kp F6          &none               &none           &kp RSHFT       &kp RCTRL       &kp RALT        &kp RGUI
+              &kp F10         &kp F1          &kp F2          &kp F3          &none               &none           &none           &none           &none           &none
+                                                              &kp SPACE       &kp TAB             &none           &none
         >;
       };
 
@@ -144,14 +144,14 @@
         //  ┃               ┃               ┃               ┃               ┃               ┃   ┃               ┃               ┃               ┃               ┃               ┃
         //  ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫   ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫
         //  ┃ BOOTLOAD      ┃               ┃               ┃               ┃               ┃   ┃               ┃               ┃               ┃               ┃ BOOTLOAD      ┃
-        //  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┛
+        //  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┫   ┣━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛
         //                                                  ┃               ┃               ┃   ┃               ┃               ┃
         //                                                  ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┛
         bindings = <
-        &sys_reset      &none           &none           &none           &none               &none           &none           &none           &none           &sys_reset
-        &none           &none           &none           &none           &none               &none           &none           &none           &none           &none
-        &bootloader     &none           &none           &none           &none               &none           &none           &none           &none           &bootloader
-                                                        &none           &none               &none           &none
+              &sys_reset      &none           &none           &none           &none               &none           &none           &none           &none           &sys_reset
+              &none           &none           &none           &none           &none               &none           &none           &none           &none           &none
+              &bootloader     &none           &none           &none           &none               &none           &none           &none           &none           &bootloader
+                                                              &none           &none               &none           &none
         >;
       };
     };
