@@ -11,13 +11,13 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: main
       import: app/west.yml
     - name: urchin-zmk-module
       remote: duckyb
       revision: main
     - name: nice-view-gem
       remote: m165437
-      revision: 3f38221c61ec  # last LVGL v8 commit; 522bbf4903e3 migrated to v9 (Jan 25 2026)
+      revision: main
   self:
     path: config
