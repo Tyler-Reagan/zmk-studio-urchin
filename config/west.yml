@@ -18,6 +18,6 @@ manifest:
       revision: main
     - name: nice-view-gem
       remote: m165437
-      revision: main
+      revision: 3f38221c61ec  # last LVGL v8 commit; 522bbf4903e3 migrated to v9 (Jan 25 2026)
   self:
     path: config
