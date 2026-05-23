@@ -1,6 +1,6 @@
 # ZMK Config — Urchin (No-Dongle)
 
-Personal ZMK firmware for the [Urchin](https://github.com/duckyb/urchin) — a 34-key column-staggered wireless split keyboard using two [nice!nano v2](https://nicekeyboards.com/nice-nano/) microcontrollers (nRF52840).
+Personal ZMK firmware for the [Urchin](https://github.com/duckyb/urchin) — a 34-key column-staggered wireless split keyboard using two [nice!nano v2](https://nicekeyboards.com/nice-nano/) microcontrollers (nRF52840) with [nice!view](https://nicekeyboards.com/nice-view/) Sharp Memory displays.
 
 **This repo is for the no-dongle setup**: the left half connects directly to your computer via USB and acts as the BLE central. Use this when you want a simple two-piece wireless keyboard with ZMK Studio support.
 
@@ -26,13 +26,40 @@ Makefile                ← workflow helper (requires gh CLI)
 
 ---
 
-## Artifacts
+## Displays
 
-| Artifact         | Shield           | Role                                        |
-| ---------------- | ---------------- | ------------------------------------------- |
-| `urchin_left`    | `urchin_left`    | Left half — USB central, ZMK Studio enabled |
-| `urchin_right`   | `urchin_right`   | Right half — BLE peripheral                 |
-| `settings_reset` | `settings_reset` | Clears all BLE bond data                    |
+Five display options are available across four branches. ZMK Studio is only available on the `main` branch — the `display/*` branches use ZMK v0.3 which is incompatible with Studio.
+
+| Display                                                                                       | Branch                | ZMK               | ZMK Studio |
+| --------------------------------------------------------------------------------------------- | --------------------- | ----------------- | ---------- |
+| [nice-view-gem](https://github.com/M165437/nice-view-gem) — animated crystal (default)        | `main`                | main / Zephyr 4.1 | Yes        |
+| [nice-view-elemental](https://github.com/kevinpastor/nice-view-elemental) — minimal geometric | `main`                | main / Zephyr 4.1 | Yes        |
+| [Hammerbeam Slideshow](https://github.com/GPeye/hammerbeam-slideshow)                         | `display/hammerbeam`  | v0.3              | No         |
+| [Corro Animation](https://github.com/GPeye/mario-peripheral-animation)                        | `display/corro`       | v0.3              | No         |
+| [Press Start](https://github.com/Ziembski/nice-view-press-start)                              | `display/press-start` | v0.3              | No         |
+
+### Switching displays on `main`
+
+`nice_view_gem` is active by default. To switch to `nice_view_elemental`, change one word in `build.yaml`:
+
+```yaml
+# default
+shield: urchin_left nice_view_adapter nice_view_gem
+
+# swap to elemental
+shield: urchin_left nice_view_adapter nice_view_elemental
+```
+
+Both modules are loaded in `config/west.yml` — no manifest changes needed.
+
+### Switching to a `display/*` branch
+
+```sh
+git checkout display/hammerbeam   # or display/corro, display/press-start
+```
+
+> [!IMPORTANT]
+> The `display/*` branches use ZMK v0.3 and do not support ZMK Studio. Switch back to `main` to regain Studio.
 
 ---
 
@@ -102,6 +129,16 @@ Just reflash both halves with updated firmware — bond data is preserved in EEP
 
 ---
 
+## Artifacts
+
+| Artifact         | Role                                                    |
+| ---------------- | ------------------------------------------------------- |
+| `urchin_left`    | Left half — USB central, ZMK Studio enabled (on `main`) |
+| `urchin_right`   | Right half — BLE peripheral                             |
+| `settings_reset` | Clears all BLE bond data                                |
+
+---
+
 ## ZMK Studio
 
 [ZMK Studio](https://zmk.studio/) lets you remap keys live over USB without reflashing.
@@ -113,7 +150,8 @@ Just reflash both halves with updated firmware — bond data is preserved in EEP
 
 Studio locking is disabled — no unlock sequence required. Studio changes persist across power cycles but are overwritten on the next firmware flash.
 
-> ZMK Studio connects to the **left half only**. The right half doesn't expose the Studio interface.
+> [!NOTE]
+> ZMK Studio is only available on the `main` branch. The `display/*` branches use ZMK v0.3 which predates Studio.
 
 ---
 
@@ -121,14 +159,14 @@ Studio locking is disabled — no unlock sequence required. Studio changes persi
 
 Six layers. Source: [config/urchin.keymap](config/urchin.keymap).
 
-| #   | Layer    | Activation                                      |
-| --- | -------- | ----------------------------------------------- |
-| 0   | **BASE** | Default                                         |
-| 1   | **DEV**  | Hold left outer thumb (`DEV+SPC`)               |
-| 2   | **SYS**  | Hold left inner thumb (`SYS+TAB`)               |
-| 3   | **NUM**  | Hold right outer thumb (`NUM+ENT`)              |
-| 4   | **FUN**  | Combo: both right thumbs (`BSPC` + `NUM+ENT`)   |
-| 5   | **BOOT** | Assign via ZMK Studio                           |
+| #   | Layer    | Activation                                    |
+| --- | -------- | --------------------------------------------- |
+| 0   | **BASE** | Default                                       |
+| 1   | **DEV**  | Hold left outer thumb (`DEV+SPC`)             |
+| 2   | **SYS**  | Hold left inner thumb (`SYS+TAB`)             |
+| 3   | **NUM**  | Hold right outer thumb (`NUM+ENT`)            |
+| 4   | **FUN**  | Combo: both right thumbs (`BSPC` + `NUM+ENT`) |
+| 5   | **BOOT** | Assign via ZMK Studio                         |
 
 **BASE** — QWERTY with home-row mods (`GUI/S` `CTRL/D` `SHIFT/F` on left; `SHIFT/J` `CTRL/K` `GUI/L` on right). Left thumbs: `SYS+TAB` (inner), `DEV+SPC` (outer). Right thumbs: `BSPC` (inner), `NUM+ENT` (outer).
 
@@ -150,11 +188,11 @@ Six layers. Source: [config/urchin.keymap](config/urchin.keymap).
 
 ZMK supports up to 5 Bluetooth profiles for pairing with multiple hosts.
 
-| Binding            | Action                                           |
-| ------------------ | ------------------------------------------------ |
-| `&bt BT_SEL 0/1/2` | Switch to profile 0, 1, or 2                     |
-| `&bt BT_CLR`       | Clear bond on active profile                     |
-| `&bt BT_CLR_ALL`   | Clear all bonds (SYS layer, left outer pinky)    |
+| Binding            | Action                                        |
+| ------------------ | --------------------------------------------- |
+| `&bt BT_SEL 0/1/2` | Switch to profile 0, 1, or 2                  |
+| `&bt BT_CLR`       | Clear bond on active profile                  |
+| `&bt BT_CLR_ALL`   | Clear all bonds (SYS layer, left outer pinky) |
 
 After switching to an unpaired profile, the left half begins advertising. Pair **Urchin** on the new host via Bluetooth settings.
 
