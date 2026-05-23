@@ -4,18 +4,18 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: duckyb
       url-base: https://github.com/duckyb
-    - name: m165437
-      url-base: https://github.com/M165437
+    - name: gpeye
+      url-base: https://github.com/GPeye
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: 9917e2f1371d5bb051bf8eb782c1297db41d742b  # main @ 2026-05-22
+      revision: v0.3
       import: app/west.yml
     - name: urchin-zmk-module
       remote: duckyb
       revision: a3ab64fa7779f82675695f3d7d17f705f840da25  # main @ 2026-05-22
-    - name: nice-view-gem
-      remote: m165437
-      revision: 0a50fe209d929c916c5664c6affd0f4977c6b012  # main @ 2026-05-22
+    - name: hammerbeam-slideshow
+      remote: gpeye
+      revision: main
   self:
     path: config
