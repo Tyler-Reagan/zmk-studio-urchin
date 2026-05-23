@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/duckyb
     - name: m165437
       url-base: https://github.com/M165437
+    - name: kevinpastor
+      url-base: https://github.com/kevinpastor
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -17,5 +19,8 @@ manifest:
     - name: nice-view-gem
       remote: m165437
       revision: 0a50fe209d929c916c5664c6affd0f4977c6b012  # main @ 2026-05-22
+    - name: nice-view-elemental
+      remote: kevinpastor
+      revision: 2915ad65a55866f4958b5dd7b557462ad28e9a07  # update-to-zmk-0.4 @ 2026-05-22
   self:
     path: config
