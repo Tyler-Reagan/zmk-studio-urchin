@@ -14,7 +14,7 @@ manifest:
     - name: urchin-zmk-module
       remote: duckyb
       revision: a3ab64fa7779f82675695f3d7d17f705f840da25  # main @ 2026-05-22
-    - name: mario-peripheral-animation
+    - name: urchin-peripheral-animation
       remote: gpeye
       revision: main
   self:
