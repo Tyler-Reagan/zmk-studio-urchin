@@ -148,6 +148,14 @@ Reflash both halves with updated firmware — bond data is preserved in EEPROM.
 - **Urchin** appears automatically.
 - Changes write to the keyboard's flash instantly.
 
+### Over Bluetooth
+
+The left half also exposes Studio over BLE (`CONFIG_ZMK_STUDIO_TRANSPORT_BLE`). Per the [ZMK docs](https://zmk.dev/docs/features/studio), BLE editing works from the **native ZMK Studio app** (macOS, Windows, Linux) or the Linux web app. The web app on macOS/Windows can't use BLE, so the keyboard won't show up there unless it's plugged in over USB.
+
+- Pair **Urchin** in the OS Bluetooth settings first, and make sure that profile is active.
+- Open the native Studio app and pick Urchin from its Bluetooth list.
+- Managed work laptops may block Bluetooth access for apps or Chrome; check with IT if the device list is empty.
+
 Studio locking is disabled — no unlock sequence required. Studio changes persist across power cycles but are overwritten on the next firmware flash.
 
 > [!NOTE]
